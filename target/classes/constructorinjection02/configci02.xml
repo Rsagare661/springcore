@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+     <bean class="constructorinjection02.car" name="ci02">
+         <constructor-arg name="companyname" value="tata"/>
+          <constructor-arg name="carname">
+              <set>
+              <value>safare</value>
+               <value>harrier</value>
+                <value>tigor</value>
+                 <value>strome</value>
+              </set>
+          </constructor-arg> 
+          
+          <constructor-arg name="price">
+            <list>
+              <value>2200000</value>
+              <value>2000000</value>
+              <value>700000</value>
+              <value>1600000</value>           
+            </list>
+            </constructor-arg>   
+     </bean>
+        
+
+</beans>
